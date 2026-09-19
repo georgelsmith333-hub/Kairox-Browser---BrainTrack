@@ -1,0 +1,117 @@
+gvie me the actual verified apk package with no tracking from aby replit or etc, and then tell me where i can psckage it fully for free and if u have that caapbilites then oj but give me my app fullt with no watermarks and nothing.
+
+I cannot give you a verified APK from the current project without misleading you.
+
+Why
+The current published Kairox artifact is still an Expo preview shell:
+
+It has no native Android project or Gradle build
+It does not contain GeckoView
+It opens pages through the external browser
+This workspace has no Android SDK or emulator
+Therefore I cannot produce and test a trustworthy standalone APK here
+An APK made from the current shell would not be the full Kairox browser you asked for.
+
+What “no Replit tracking” can realistically mean
+I can build Kairox with:
+
+No Replit analytics SDK
+No Replit runtime dependency
+No Replit API calls for normal browsing
+No automatic history or profile upload
+No Firebase or Crashlytics
+No forced remote updates
+Local-only profiles, tabs, settings, and downloads
+Only the permissions the browser actually needs
+However, no browser can prevent every kind of tracking:
+
+Websites can see requests made to them
+Your ISP or network operator can see network activity
+Google Play can record installation/update events
+A download host can log downloads
+If you want to avoid Google Play tracking as much as possible, distribute the signed APK directly instead of through Play Store.
+
+Best free packaging route
+Option 1: Android Studio — best for full control
+Install Android Studio on your own computer:
+
+Open the native Kairox Android project
+Install the Android SDK and build tools
+Build a signed release APK
+Test it on an emulator and physical phone
+Keep your signing key backed up privately
+Android Studio is free. This is the most independent option.
+
+Option 2: GitHub Actions — best automated free option
+Use a public GitHub repository with an Android build workflow:
+
+GitHub stores the source
+GitHub Actions builds the APK
+GitHub Releases distributes the APK
+The build runs independently of Replit
+APK checksums can be published with every release
+For private repositories, GitHub’s free build minutes may be limited. Public repositories are generally the most practical free option.
+
+Option 3: F-Droid — best non-Google distribution
+F-Droid is appropriate if:
+
+The app is open source
+Dependencies meet F-Droid requirements
+The build is reproducible
+You accept their review process
+For direct personal distribution, GitHub Releases is simpler.
+
+Recommended Kairox architecture
+For the actual browser:
+
+Kotlin Android host
+GeckoView browser engine
+Local profile storage
+Separate GeckoView session/storage per profile
+No Replit runtime
+No remote telemetry by default
+User-controlled route settings only
+No unknown public proxy rotation
+No CAPTCHA solving or access-control bypass
+No silent cloud sync
+For iOS, Android GeckoView cannot simply be reused. iOS would require a separate WebKit-based implementation and App Store review.
+
+Release security checklist
+Every production APK should have:
+
+A user-owned signing key
+A permanent backup of that key
+A unique Android versionCode
+SHA-256 checksum
+Clean-device installation test
+Offline launch test
+Network request audit
+Manifest permission audit
+No Replit URLs or environment variables in the release binary
+No Firebase, Expo update service, or analytics unless explicitly enabled
+Profile export and restore test
+The signing key is critical. If it is lost, future APKs may not update existing installations.
+
+Current status
+The existing Kairox shell has no Replit tracking code detected in the app logic, and its core profile/tab state is local. But it is not yet an independently packaged full browser.
+
+The correct next step is to convert the current Expo shell into a native Android GeckoView project, then build and verify the signed APK through Android Studio or GitHub Actions. Until that native layer exists, I will not label any generated APK as your “fully working browser.”
+
+Can i do this using claude? Can i add github and u do? Ive added github first tell me clearly u can do using that then go ahead. GitHub (App)
+
+Yes. With GitHub connected, I can create the independent source repository, add the Android build pipeline, and prepare the project so APK/AAB builds happen outside Replit. I still need to connect the GitHub integration first; it is currently only added as an unconnected connector, so I’m opening that connection now.
+
+I can do the GitHub-based part: connect the account, create or update the repository, add the independent Android build workflow, and keep Replit out of the released app. GitHub is not connected yet, so I’m sending the OAuth connection request now.
+
+GitHub (App) connected
+You've reached your daily free quota limit. It will reset at 12:00 AM UTC.
+
+Done?
+
+Kairox Browser
+Kairox Browser
+Mobile
+Kairox Design System
+Design System
+Search tools…
+Open Kairox Design System
