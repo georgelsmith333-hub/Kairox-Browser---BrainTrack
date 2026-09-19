@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Kairox Browser - Brintrack IT",
+    "slug": "kairoxbrowserbrintrackit",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "kairoxbrowserbrintrackit",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.kairoxbrowserbrintrackit.app"
+    },
+    "android": {
+      "package": "com.kairoxbrowserbrintrackit.app",
+      "versionCode": 2,
+      "permissions": ["INTERNET"]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
