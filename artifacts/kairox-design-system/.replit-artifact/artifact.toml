@@ -1,0 +1,19 @@
+kind = "design-system"
+previewPath = "/kairox-system/"
+title = "Kairox Design System"
+description = "A restrained, high-contrast visual system for Kairox Browser: a mobile browser for everyday browsing, isolated profiles, privacy controls, network diagnostics, developer tools, and research workflows."
+version = "1.0.0"
+id = "artifacts/kairox-design-system"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kairox-system/" ]
+localPort = 22847
+
+[services.development]
+run = "pnpm --filter @workspace/kairox-design-system run dev"
+
+[services.env]
+PORT = "22847"
+BASE_PATH = "/kairox-system/"
