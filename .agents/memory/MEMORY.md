@@ -1,0 +1,2 @@
+- [Browser runtime boundary](browser-runtime-boundary.md) — Android embeds the page surface; Expo web preview uses explicit external handoff.
+- [Android release validation](android-release-validation.md) — Android signing and emulator checks must run in GitHub Actions; the local workspace has no Android toolchain.
