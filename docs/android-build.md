@@ -1,6 +1,6 @@
 # Kairox Browser build and release
 
-Kairox is an Expo browser with a native embedded page surface on Android and a live embedded page preview on web. Sites that refuse iframe embedding can always be opened in the device or system browser.
+Kairox is an Expo browser with a native embedded page surface on Android. The Replit/Expo web preview is a browser-hosted preview and uses an iframe because a web page cannot provide Android's native WebView runtime. Sites that refuse web framing can use the explicitly labeled device-browser fallback; the Android APK remains the self-contained Kairox browsing surface.
 
 ## Build an APK
 
